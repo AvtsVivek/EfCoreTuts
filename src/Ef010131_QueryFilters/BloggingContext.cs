@@ -1,4 +1,4 @@
-﻿namespace Ef010101_QueryFilters;
+﻿namespace Ef010131_QueryFilters;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +18,7 @@ public class BloggingContext : DbContext
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
-    
+
     //optionsBuilder
     //    .UseSqlServer(
     //        @"Server=(localdb)\mssqllocaldb;Database=Querying.QueryFilters.Blogging;Trusted_Connection=True");

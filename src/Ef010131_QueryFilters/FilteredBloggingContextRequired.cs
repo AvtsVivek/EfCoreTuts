@@ -1,4 +1,4 @@
-﻿namespace Ef010101_QueryFilters;
+﻿namespace Ef010131_QueryFilters;
 using Microsoft.EntityFrameworkCore;
 
 public class FilteredBloggingContextRequired : DbContext

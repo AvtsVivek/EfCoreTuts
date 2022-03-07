@@ -88,8 +88,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ef000230_ProductRepo", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ef000230_ProductRepo.Tests", "test\Ef000230_ProductRepo.Tests\Ef000230_ProductRepo.Tests.csproj", "{29EB32BD-316D-4F96-B3D0-C39BD0E17CD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ef010101_QueryFilters", "src\Ef010101_QueryFilters\Ef010101_QueryFilters.csproj", "{F924B339-975A-4A72-A91B-E2DBD52D1A5C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -244,10 +242,6 @@ Global
 		{29EB32BD-316D-4F96-B3D0-C39BD0E17CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29EB32BD-316D-4F96-B3D0-C39BD0E17CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29EB32BD-316D-4F96-B3D0-C39BD0E17CD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F924B339-975A-4A72-A91B-E2DBD52D1A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F924B339-975A-4A72-A91B-E2DBD52D1A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F924B339-975A-4A72-A91B-E2DBD52D1A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F924B339-975A-4A72-A91B-E2DBD52D1A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -290,7 +284,6 @@ Global
 		{77B3D115-8C36-46D8-B042-4E62F5075137} = {2A60738A-EC04-475D-AD8C-F376148E1E87}
 		{13B92D81-44E8-48D8-B6E4-38A812309C7D} = {2A60738A-EC04-475D-AD8C-F376148E1E87}
 		{29EB32BD-316D-4F96-B3D0-C39BD0E17CD2} = {9EDE4431-69CE-4989-AC59-937D12E6B9BC}
-		{F924B339-975A-4A72-A91B-E2DBD52D1A5C} = {2A60738A-EC04-475D-AD8C-F376148E1E87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DD9345A-578D-4F49-BE31-095A2818FDAD}

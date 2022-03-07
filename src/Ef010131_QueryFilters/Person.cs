@@ -1,4 +1,4 @@
-﻿namespace Ef010101_QueryFilters;
+﻿namespace Ef010131_QueryFilters;
 
 using System.Collections.Generic;
 
@@ -11,7 +11,7 @@ public class Blog
 #pragma warning restore IDE0051, CS0169 // Remove unused private members
 
   public int BlogId { get; set; }
-  public string Name { get; set; } = String.Empty;
+  public string Name { get; set; } = string.Empty;
   public string Url { get; set; }
 
   public List<Post> Posts { get; set; }

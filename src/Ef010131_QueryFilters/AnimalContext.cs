@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ef010101_QueryFilters;
+namespace Ef010131_QueryFilters;
 
 using Microsoft.EntityFrameworkCore;
 

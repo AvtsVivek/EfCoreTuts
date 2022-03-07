@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Ef010101_QueryFilters;
+using Ef010131_QueryFilters;
 
 Console.WriteLine("Hello, World!");
 

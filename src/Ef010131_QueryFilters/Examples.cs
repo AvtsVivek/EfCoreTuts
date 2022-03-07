@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Ef010101_QueryFilters;
+namespace Ef010131_QueryFilters;
 
 public class Examples
 {
