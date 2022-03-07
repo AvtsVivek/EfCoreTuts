@@ -351,3 +351,7 @@ MigrationBackup/
 
 # Temp db files.
 *.db*
+
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
