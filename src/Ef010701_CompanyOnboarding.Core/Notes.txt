@@ -1,0 +1,8 @@
+Questions
+
+1. Why is Department and SubDepartment cannot be a value object?
+This is because, Department has a bigger role. It needs to have relation with not only company
+but also with office and employee. Just because, Department is totally dependent on an Company 
+entity, does not mean that its a value object.
+
+2.
