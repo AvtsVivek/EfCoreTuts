@@ -2,19 +2,19 @@
 
 namespace Ef010101_QueryFilters;
 
-public class MyDbContext : DbContext
+public class SingleEntityContext : DbContext
 {
-  public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
+  public SingleEntityContext(DbContextOptions<SingleEntityContext> options) : base(options)
   {  }
 
-  public DbSet<MyEntity> MyEntities { get; set; } = default!;
+  public DbSet<SingleEntity> MyEntities { get; set; } = default!;
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
-    modelBuilder.Entity<MyEntity>()
+    modelBuilder.Entity<SingleEntity>()
         .HasQueryFilter(x => !x.SoftDeleted);
 
-    modelBuilder.Entity<MyEntity>()
+    modelBuilder.Entity<SingleEntity>()
         .HasIndex(x => x.SoftDeleted);
   }
 }
