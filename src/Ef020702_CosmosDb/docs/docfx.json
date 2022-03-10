@@ -1,0 +1,98 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/**.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "_site/**"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "**.md",
+          "**/*.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**.png",
+          "**.jpg"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "breadcrumb_path": "/ef/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "searchScope": [
+        "Entity Framework"
+      ],
+      "ms.topic": "conceptual",
+      "audience": "developer",
+      "ms.prod": "entity-framework",
+      "ms.tgt_pltfrm": "dotnet",
+      "ms.devlang": "dotnet",
+      "ms.author": "avickers",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "dotnet/EntityFramework.Docs",
+      "feedback_product_url": "https://github.com/dotnet/efcore/issues/new/choose",
+      "uhfHeaderId": []
+    },
+    "fileMetadata": {
+      "feedback_product_url": {
+        "ef6/**/**.md": "https://github.com/dotnet/ef6/issues/new"
+      },
+      "ms.technology": {
+        "core/**/**.md": "entity-framework-core",
+        "ef6/**/**.md": "entity-framework-6",
+        "efcore-and-ef6/**/**.md": "entity-framework-core"
+      }      
+    },
+    "dest": "_site",
+    "template": [
+      "default"
+    ],
+    "markdownEngineName": "markdig"
+  }
+}
