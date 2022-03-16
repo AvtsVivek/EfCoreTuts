@@ -16,7 +16,7 @@ internal class Program
     Console.WriteLine($"and not in bin folder.");
     Console.WriteLine($"This is because we have the tag <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory> in the proj directory.");
 
-    var useSqlServer = true; // Use what ever you are comfirtable with.
+    var useSqlServer = false; // Use what ever you are comfirtable with.
 
     var dbContextOptionsBuilder = new DbContextOptionsBuilder<BakeryDbContext>();
 

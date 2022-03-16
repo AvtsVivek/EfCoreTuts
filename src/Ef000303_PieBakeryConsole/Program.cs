@@ -8,7 +8,7 @@ internal class Program
   private static void Main()
   {
     var fileName = "bakery.db";
-    var useSqlServer = true;
+    var useSqlServer = false;
     var dbContextOptionsBuilder = new DbContextOptionsBuilder<BakeryDbContext>();
 
     if (useSqlServer)

@@ -21,7 +21,7 @@ internal class PieEntityTypeConfiguration : IEntityTypeConfiguration<Pie>
       b.HasKey("PieId", "Id");
       b.Property(b => b.Id).ValueGeneratedNever();
               //b.Property(b => b.Id).ValueGeneratedOnAdd();
-            });
+    });
 
     builder.Navigation(x => x.Ingredients).Metadata.SetField("_ingredients");
 

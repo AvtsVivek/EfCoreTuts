@@ -32,8 +32,16 @@ internal class PieEntityTypeConfiguration : IEntityTypeConfiguration<Pie>
 
     // Mark the ingredients as an owned collection.
     // And set a backing field for it.
-    var ingredientsConfiguration = builder.OwnsMany(x => x.Ingredients);
+    //var ingredientsConfiguration = builder.OwnsMany(x => x.Ingredients);
+    var ingredientsConfiguration = builder.OwnsMany(i => i.Ingredients, b =>
+    {
+      b.HasKey("PieId", "Id");
+      b.Property(b => b.Id).ValueGeneratedNever();
+      //b.Property(b => b.Id).ValueGeneratedOnAdd();
+    });
+
     builder.Navigation(x => x.Ingredients).Metadata.SetField("_ingredients");
+
     // Not clear what this is. Need to find out.
     builder.Navigation(x => x.Ingredients).UsePropertyAccessMode(PropertyAccessMode.Field);
 

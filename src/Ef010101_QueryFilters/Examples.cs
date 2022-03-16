@@ -9,6 +9,35 @@ namespace Ef010101_QueryFilters;
 
 public class Examples
 {
+
+  public static void RunFromSqlRawExample()
+  {
+    var inMemoryCollectionName = Guid.NewGuid().ToString();
+
+    var options = new DbContextOptionsBuilder<SingleEntityContext>()
+          .UseInMemoryDatabase(inMemoryCollectionName).Options;
+
+    using var context = new SingleEntityContext(options);
+    context.Database.EnsureCreated();
+
+    var e1 = new SingleEntity { SoftDeleted = false };
+    var e2 = new SingleEntity { SoftDeleted = true };
+    context.AddRange(e1, e2);
+    context.SaveChanges();
+
+    var query = RelationalQueryableExtensions.FromSqlRaw(context.MyEntities, "SELECT * FROM MyEntities");
+    var entities = query.ToList();
+
+    //VERIFY
+    var sql = query.ToQueryString();
+    //_output.WriteLine(sql);
+    var entityCount = entities.Count();
+
+    Console.WriteLine(entityCount);
+    //Console.WriteLine(entityCountFull);
+
+  }
+
   public static void RunParentDependentExample()
   {
     var inMemoryCollectionName = Guid.NewGuid().ToString();
