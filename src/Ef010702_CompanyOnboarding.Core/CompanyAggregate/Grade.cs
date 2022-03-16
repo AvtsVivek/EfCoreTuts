@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PluralsightDdd.SharedKernel;
 using PluralsightDdd.SharedKernel.Interfaces;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010702_CompanyOnboarding.Core.CompanyAggregate;
 
 public class Grade : BaseEntity<long>, IAggregateRoot
 {

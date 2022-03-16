@@ -1,6 +1,6 @@
 ﻿using Ardalis.SmartEnum;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010701_CompanyOnboarding.Core.CompanyAggregate;
 
 public class OfficeType : SmartEnum<OfficeType>
 {

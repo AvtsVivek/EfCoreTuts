@@ -1,4 +1,4 @@
-﻿namespace MeWurk.Hrms.CompanyOnboarding.Core.Utilities;
+﻿namespace Ef010701_CompanyOnboarding.Core.Utilities;
 
 public class Constants
 {

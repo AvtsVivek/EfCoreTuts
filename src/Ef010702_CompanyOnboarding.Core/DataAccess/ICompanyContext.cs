@@ -1,8 +1,8 @@
-﻿using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.ReferenceDataAggregate;
+﻿using Ef010702_CompanyOnboarding.Core.CompanyAggregate;
+using Ef010702_CompanyOnboarding.Core.ReferenceDataAggregate;
 using Microsoft.EntityFrameworkCore;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
+namespace Ef010702_CompanyOnboarding.Core.DataAccess;
 
 public interface ICompanyContext : IDataContextTransaction
 {

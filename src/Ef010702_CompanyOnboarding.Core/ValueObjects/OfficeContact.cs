@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.ValueObjects;
+namespace Ef010702_CompanyOnboarding.Core.ValueObjects;
 
 public class OfficeContact : ValueObject
 {

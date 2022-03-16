@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010702_CompanyOnboarding.Core.CompanyAggregate;
 
 public class Subscription : BaseEntity<ulong>
 {

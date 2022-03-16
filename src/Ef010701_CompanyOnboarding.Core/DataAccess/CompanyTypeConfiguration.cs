@@ -1,9 +1,9 @@
-﻿using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.Utilities;
+﻿using Ef010701_CompanyOnboarding.Core.Utilities;
+using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
+namespace Ef010701_CompanyOnboarding.Core.DataAccess;
 
 public class CompanyTypeConfiguration : IEntityTypeConfiguration<Company>
 {
@@ -45,7 +45,7 @@ public class CompanyTypeConfiguration : IEntityTypeConfiguration<Company>
       departmentsBuilder.OwnsMany(department => department.SubDepartments, subDepartmentBuilder =>
               {
 
-        });
+              });
     });
 
     var companyProfileBuilder = companyBuilder.OwnsOne(x => x.CompanyProfile); //, nameBuilder =>

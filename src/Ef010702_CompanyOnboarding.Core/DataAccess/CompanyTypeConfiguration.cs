@@ -1,9 +1,9 @@
-﻿using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.Utilities;
+﻿using Ef010702_CompanyOnboarding.Core.CompanyAggregate;
+using Ef010702_CompanyOnboarding.Core.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
+namespace Ef010702_CompanyOnboarding.Core.DataAccess;
 
 public class CompanyTypeConfiguration : IEntityTypeConfiguration<Company>
 {

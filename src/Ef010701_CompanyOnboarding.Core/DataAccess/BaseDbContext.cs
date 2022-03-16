@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
+namespace Ef010701_CompanyOnboarding.Core.DataAccess;
 
 public interface IDataContextTransaction
 {

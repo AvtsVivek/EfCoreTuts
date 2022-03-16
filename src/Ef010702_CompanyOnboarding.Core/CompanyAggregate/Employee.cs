@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.ValueObjects;
+using Ef010702_CompanyOnboarding.Core.ValueObjects;
 using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010702_CompanyOnboarding.Core.CompanyAggregate;
 
 public class Employee : BaseEntity<long>
 {

@@ -1,6 +1,6 @@
 ﻿using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.ValueObjects;
+namespace Ef010702_CompanyOnboarding.Core.ValueObjects;
 
 public class OfficeLocation : ValueObject
 {

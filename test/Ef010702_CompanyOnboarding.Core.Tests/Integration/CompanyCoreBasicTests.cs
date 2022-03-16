@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ef010702_CompanyOnboarding.Core.CompanyAggregate;
+using Ef010702_CompanyOnboarding.Core.DataAccess;
 using FluentAssertions;
-using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 

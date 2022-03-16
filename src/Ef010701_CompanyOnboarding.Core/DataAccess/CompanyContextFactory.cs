@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
+namespace Ef010701_CompanyOnboarding.Core.DataAccess;
 
 public class CompanyContextFactory : IDesignTimeDbContextFactory<CompanyContext>
 {

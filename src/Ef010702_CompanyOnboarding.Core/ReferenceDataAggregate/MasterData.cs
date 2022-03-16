@@ -1,6 +1,6 @@
 ﻿using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.ReferenceDataAggregate;
+namespace Ef010702_CompanyOnboarding.Core.ReferenceDataAggregate;
 
 public abstract class MasterData : BaseEntity<short>
 {

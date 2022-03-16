@@ -1,4 +1,4 @@
-﻿namespace MeWurk.Hrms.CompanyOnboarding.Core.ReferenceDataAggregate;
+﻿namespace Ef010701_CompanyOnboarding.Core.ReferenceDataAggregate;
 
 internal class ReferenceDataService
 {

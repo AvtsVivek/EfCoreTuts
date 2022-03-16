@@ -1,4 +1,4 @@
-﻿namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+﻿namespace Ef010701_CompanyOnboarding.Core.CompanyAggregate;
 
 // I am not sure if this login entity is needed.
 // The idea here is to capture the logged in user details

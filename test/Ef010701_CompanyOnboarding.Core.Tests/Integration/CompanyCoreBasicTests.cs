@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ef010701_CompanyOnboarding.Core.CompanyAggregate;
+using Ef010701_CompanyOnboarding.Core.DataAccess;
 using FluentAssertions;
-using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
-using MeWurk.Hrms.CompanyOnboarding.Core.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
@@ -89,7 +89,7 @@ public abstract class CompanyCoreBasicTests
 
   private void PopulateDatabase(CompanyContext companyContext)
   {
-    var company_zero = new Company("MeWurk", "MeWurk", "Services", new List<SocialProfile>(), "Corprate", "1 - 50");
+    var company_zero = new Company.Company("MeWurk", "MeWurk", "Services", new List<SocialProfile>(), "Corprate", "1 - 50");
 
     var enggDept = new Department("Engg", "Engineering Dept");
 
@@ -111,7 +111,7 @@ public abstract class CompanyCoreBasicTests
                     new SocialProfile("MxWorkKooId", "Koo for MxWork"),
                 };
 
-    var company_one = new Company("MxWork", "MxWork", "SoftwareIndustry", socialProfiles, "Corporate", "1 - 50");
+    var company_one = new Company.Company("MxWork", "MxWork", "SoftwareIndustry", socialProfiles, "Corporate", "1 - 50");
     companyContext.Add(company_one);
     companyContext.SaveChanges();
   }

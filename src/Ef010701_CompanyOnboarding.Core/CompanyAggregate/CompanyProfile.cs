@@ -1,6 +1,6 @@
 ﻿using PluralsightDdd.SharedKernel;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010701_CompanyOnboarding.Core.CompanyAggregate;
 
 public class CompanyProfile : ValueObject
 {

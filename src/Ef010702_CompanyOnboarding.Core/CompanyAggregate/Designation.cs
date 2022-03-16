@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PluralsightDdd.SharedKernel;
 using PluralsightDdd.SharedKernel.Interfaces;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010702_CompanyOnboarding.Core.CompanyAggregate;
 
 public class Designation : BaseEntity<long>, IAggregateRoot
 {
@@ -32,7 +32,7 @@ public class Designation : BaseEntity<long>, IAggregateRoot
 
     Name = name ?? throw new ArgumentNullException($"{nameof(name)} cannot be empty");
 
-    if(!string.IsNullOrWhiteSpace(jobTitle))
+    if (!string.IsNullOrWhiteSpace(jobTitle))
       JobTitle = jobTitle;
     JobTitle = name;
 

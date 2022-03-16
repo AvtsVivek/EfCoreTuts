@@ -1,6 +1,6 @@
 ﻿using Ardalis.SmartEnum;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010701_CompanyOnboarding.Core.CompanyAggregate;
 
 // https://www.figma.com/proto/i7bDKtCGcihmJrMZQyUaBV/Signup?node-id=2%3A23788&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=2%3A23788&show-proto-sidebar=1
 public class CompanySize : SmartEnum<CompanySize>

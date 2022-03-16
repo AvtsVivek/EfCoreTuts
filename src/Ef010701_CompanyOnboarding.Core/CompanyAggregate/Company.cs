@@ -1,7 +1,7 @@
 ﻿using PluralsightDdd.SharedKernel;
 using PluralsightDdd.SharedKernel.Interfaces;
 
-namespace MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+namespace Ef010701_CompanyOnboarding.Core.CompanyAggregate;
 
 // This is based on the following
 // https://tall-nova-c74.notion.site/Company-Profile-30dc757df583404991e645a7e4939170
