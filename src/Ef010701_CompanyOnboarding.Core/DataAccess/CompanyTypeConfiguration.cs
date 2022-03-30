@@ -1,5 +1,5 @@
-﻿using Ef010701_CompanyOnboarding.Core.Utilities;
-using MeWurk.Hrms.CompanyOnboarding.Core.CompanyAggregate;
+﻿using Ef010701_CompanyOnboarding.Core.CompanyAggregate;
+using Ef010701_CompanyOnboarding.Core.Utilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

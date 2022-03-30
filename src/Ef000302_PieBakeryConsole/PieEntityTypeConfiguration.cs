@@ -53,3 +53,7 @@ internal class PieEntityTypeConfiguration : IEntityTypeConfiguration<Pie>
     //builder.HasOne<Category>().WithMany().HasForeignKey(x => x.CategoryId);
   }
 }
+
+
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();

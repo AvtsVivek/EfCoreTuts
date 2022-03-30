@@ -49,3 +49,6 @@ public class Booster
 {
   public int Index { get; set; }
 }
+
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();

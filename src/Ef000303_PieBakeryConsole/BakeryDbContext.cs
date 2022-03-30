@@ -27,3 +27,5 @@ public class BakeryDbContext : DbContext
 
   }
 }
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();

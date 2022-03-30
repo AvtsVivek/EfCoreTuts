@@ -34,3 +34,6 @@ internal class PieEntityTypeConfiguration : IEntityTypeConfiguration<Pie>
 
   }
 }
+
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();

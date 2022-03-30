@@ -28,3 +28,6 @@ public class CustomerTypeConfiguration : IEntityTypeConfiguration<Customer>
         .HasColumnType("money");
   }
 }
+
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();

@@ -1,4 +1,4 @@
-using Ef000501_SubscriptionConsole.Domain;
+﻿using Ef000501_SubscriptionConsole.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,3 +18,6 @@ public class TagTypeConfiguration : IEntityTypeConfiguration<Tag>
         .IsRequired();
   }
 }
+
+//https://github.com/dotnet/efcore/issues/11162
+// ValueGeneratedNever();
