@@ -7,12 +7,12 @@ namespace SamuraiScaffoldConsole
     {
         public Battle()
         {
-            Samurais = new HashSet<Samurai>();
+            BattleSamurais = new HashSet<BattleSamurai>();
         }
 
         public int BattleId { get; set; }
         public string? Name { get; set; }
 
-        public virtual ICollection<Samurai> Samurais { get; set; }
+        public virtual ICollection<BattleSamurai> BattleSamurais { get; set; }
     }
 }
