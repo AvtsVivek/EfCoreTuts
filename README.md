@@ -11,3 +11,9 @@ git config --local user.name "Vivekanand swamy"
 git config --local user.email "vivek7dm@hotmail.com"
 git config --list
 
+
+
+The following the solution of the course
+    https://app.pluralsight.com/library/courses/entity-framework-core-get-started/
+\EfCoreTuts\src\Ef040001_Samurai\SamuraiApp.Data\SamuraiApp.Data.csproj
+
