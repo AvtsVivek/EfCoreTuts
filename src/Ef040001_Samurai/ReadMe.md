@@ -17,6 +17,10 @@
 	Script-Migration
 	Update-Database -verbose
 
+	When you add a migration do the following. First set the start up project. 
+	This should be the web project. 
+	Then in the package manager console, select the Samurai.Data in the default proejct dropdown.
+
 5.	The SamuraiScaffoldConsole Project is understaning how to reverse engineer a database.
 	This is a good way to create a dbcontext with its efcore configuration.
 	So just create some database with relationships, and you can know from it how 
@@ -25,6 +29,7 @@
 6.  For Reverse engineering, create a .net project simila to SamuraiScaffoldConsole.
 	Ensure necessary refernces are in place(see the proj file.)
 	In the package manager console, select the Default project to be SamuraiScaffoldConsole(or what ever yours is)
+	Then also ensure the project SamuraiScaffoldConsole is startup project.
 	Finally run the following command.
 	scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SamuraiAppDataFirstLook;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
 
