@@ -7,14 +7,15 @@ namespace SamuraiApp.Data;
   {
       public DbSet<Samurai> Samurais { get; set; }
       public DbSet<Quote> Quotes { get; set; }
-
+      
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
-          //optionsBuilder.UseSqlServer(
-          //    "Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=SamuraiAppDataFirstLook");
+        
+          optionsBuilder
+            .UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=SamuraiAppDataFirstLook");
 
-          optionsBuilder.UseSqlite(
-            "Data Source = SamuraiAppDataFirstLook.sqlite");
+          //optionsBuilder.UseSqlite(
+          //  "Data Source = SamuraiAppDataFirstLook.sqlite");
 
       }
   }

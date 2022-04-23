@@ -9,4 +9,23 @@
 	SamuraiAppDataFirstLook.Sqlite. Where as in the console application, 
 	the database is created deep inside of the bin folder.
 
-3.	
+3.	This is needed on the machine. 
+	dotnet tool install --global dotnet-ef
+	Then run the command get-help entityframework
+
+4.	Add-Migration Init
+	Script-Migration
+	Update-Database -verbose
+
+5.	The SamuraiScaffoldConsole Project is understaning how to reverse engineer a database.
+	This is a good way to create a dbcontext with its efcore configuration.
+	So just create some database with relationships, and you can know from it how 
+	to create model classes for it.
+
+6.  For Reverse engineering, create a .net project simila to SamuraiScaffoldConsole.
+	Ensure necessary refernces are in place(see the proj file.)
+	In the package manager console, select the Default project to be SamuraiScaffoldConsole(or what ever yours is)
+	Finally run the following command.
+	scaffold-dbcontext -provider Microsoft.EntityFrameworkCore.SqlServer -connection "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SamuraiAppDataFirstLook;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+
+
