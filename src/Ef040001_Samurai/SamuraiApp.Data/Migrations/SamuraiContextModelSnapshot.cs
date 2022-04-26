@@ -58,6 +58,27 @@ namespace SamuraiApp.Data.Migrations
                     b.ToTable("BattleSamurai");
                 });
 
+            modelBuilder.Entity("SamuraiApp.Domain.Folder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Folders");
+                });
+
             modelBuilder.Entity("SamuraiApp.Domain.Quote", b =>
                 {
                     b.Property<int>("Id")
@@ -110,6 +131,15 @@ namespace SamuraiApp.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("SamuraiApp.Domain.Folder", b =>
+                {
+                    b.HasOne("SamuraiApp.Domain.Folder", "Parent")
+                        .WithMany("SubFolders")
+                        .HasForeignKey("ParentId");
+
+                    b.Navigation("Parent");
+                });
+
             modelBuilder.Entity("SamuraiApp.Domain.Quote", b =>
                 {
                     b.HasOne("SamuraiApp.Domain.Samurai", "Samurai")
@@ -119,6 +149,11 @@ namespace SamuraiApp.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Samurai");
+                });
+
+            modelBuilder.Entity("SamuraiApp.Domain.Folder", b =>
+                {
+                    b.Navigation("SubFolders");
                 });
 
             modelBuilder.Entity("SamuraiApp.Domain.Samurai", b =>

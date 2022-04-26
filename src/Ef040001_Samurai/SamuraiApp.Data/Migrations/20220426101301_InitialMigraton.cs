@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace SamuraiApp.Data.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialMigraton : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,6 +20,25 @@ namespace SamuraiApp.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Battles", x => x.BattleId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Folders",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ParentId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Folders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Folders_Folders_ParentId",
+                        column: x => x.ParentId,
+                        principalTable: "Folders",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -38,21 +58,22 @@ namespace SamuraiApp.Data.Migrations
                 name: "BattleSamurai",
                 columns: table => new
                 {
-                    BattlesBattleId = table.Column<int>(type: "int", nullable: false),
-                    SamuraisId = table.Column<int>(type: "int", nullable: false)
+                    SamuraiId = table.Column<int>(type: "int", nullable: false),
+                    BattleId = table.Column<int>(type: "int", nullable: false),
+                    DateJoined = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "getdate()")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BattleSamurai", x => new { x.BattlesBattleId, x.SamuraisId });
+                    table.PrimaryKey("PK_BattleSamurai", x => new { x.BattleId, x.SamuraiId });
                     table.ForeignKey(
-                        name: "FK_BattleSamurai_Battles_BattlesBattleId",
-                        column: x => x.BattlesBattleId,
+                        name: "FK_BattleSamurai_Battles_BattleId",
+                        column: x => x.BattleId,
                         principalTable: "Battles",
                         principalColumn: "BattleId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BattleSamurai_Samurais_SamuraisId",
-                        column: x => x.SamuraisId,
+                        name: "FK_BattleSamurai_Samurais_SamuraiId",
+                        column: x => x.SamuraiId,
                         principalTable: "Samurais",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -79,9 +100,14 @@ namespace SamuraiApp.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BattleSamurai_SamuraisId",
+                name: "IX_BattleSamurai_SamuraiId",
                 table: "BattleSamurai",
-                column: "SamuraisId");
+                column: "SamuraiId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Folders_ParentId",
+                table: "Folders",
+                column: "ParentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Quotes_SamuraiId",
@@ -93,6 +119,9 @@ namespace SamuraiApp.Data.Migrations
         {
             migrationBuilder.DropTable(
                 name: "BattleSamurai");
+
+            migrationBuilder.DropTable(
+                name: "Folders");
 
             migrationBuilder.DropTable(
                 name: "Quotes");

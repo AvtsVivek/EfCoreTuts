@@ -12,16 +12,17 @@ public class SamuraiContext : DbContext
     public DbSet<Samurai> Samurais { get; set; }
     public DbSet<Quote> Quotes { get; set; }
     public DbSet<Battle> Battles { get; set; }
+    public DbSet<Folder> Folders { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=SamuraiAppDataFirstLook");
+        optionsBuilder.UseSqlServer("Data Source= (localdb)\\MSSQLLocalDB; Initial Catalog=SamuraiAppDataFirstLook");
         // optionsBuilder.UseSqlite("Data Source = SamuraiAppDataFirstLook.sqlite");
-        optionsBuilder.UseInMemoryDatabase(new Guid().ToString());
+        // optionsBuilder.UseInMemoryDatabase(new Guid().ToString());
 
         optionsBuilder.LogTo(logMessage =>
             {
-                Debugger.Break();
+                // Debugger.Break();
                 Debug.WriteLine(logMessage);
                 Console.WriteLine(logMessage);
                 // var logStream = new StreamWriter("mylog.txt", append: true);
@@ -44,5 +45,16 @@ public class SamuraiContext : DbContext
                bs => bs.HasOne<Samurai>().WithMany())
              .Property(bs => bs.DateJoined)
              .HasDefaultValueSql("getdate()");
+
+
+        modelBuilder.Entity<Folder>(entity =>
+        {
+            // entity.HasIndex(e => e.ParentId, "IX_Folders_ParentId");
+
+            entity.HasOne(d => d.Parent)
+                .WithMany(p => p.SubFolders)
+                .HasForeignKey(d => d.ParentId);
+        });
+
     }
 }

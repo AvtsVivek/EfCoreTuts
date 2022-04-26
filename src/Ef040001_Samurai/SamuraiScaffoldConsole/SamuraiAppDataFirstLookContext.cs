@@ -18,6 +18,7 @@ namespace SamuraiScaffoldConsole
 
         public virtual DbSet<Battle> Battles { get; set; } = null!;
         public virtual DbSet<BattleSamurai> BattleSamurais { get; set; } = null!;
+        public virtual DbSet<Folder> Folders { get; set; } = null!;
         public virtual DbSet<Quote> Quotes { get; set; } = null!;
         public virtual DbSet<Samurai> Samurais { get; set; } = null!;
 
@@ -31,30 +32,6 @@ namespace SamuraiScaffoldConsole
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // The default many to many is configured as follows.
-            //modelBuilder.Entity<Battle>(entity =>
-            //{
-            //    entity.HasMany(d => d.Samurais)
-            //        .WithMany(p => p.BattlesBattles)
-            //        .UsingEntity<Dictionary<string, object>>(
-            //            "BattleSamurai",
-            //            l => l.HasOne<Samurai>()
-            //            .WithMany()
-            //            .HasForeignKey("SamuraisId"),
-            //
-            //            r => r.HasOne<Battle>()
-            //            .WithMany()
-            //            .HasForeignKey("BattlesBattleId"),
-            //            j =>
-            //            {
-            //                j.HasKey("BattlesBattleId", "SamuraisId");
-
-            //                j.ToTable("BattleSamurai");
-
-            //                j.HasIndex(new[] { "SamuraisId" }, "IX_BattleSamurai_SamuraisId");
-            //            });
-            //});
-
             modelBuilder.Entity<BattleSamurai>(entity =>
             {
                 entity.HasKey(e => new { e.BattleId, e.SamuraiId });
@@ -72,6 +49,15 @@ namespace SamuraiScaffoldConsole
                 entity.HasOne(d => d.Samurai)
                     .WithMany(p => p.BattleSamurais)
                     .HasForeignKey(d => d.SamuraiId);
+            });
+
+            modelBuilder.Entity<Folder>(entity =>
+            {
+                entity.HasIndex(e => e.ParentId, "IX_Folders_ParentId");
+
+                entity.HasOne(d => d.Parent)
+                    .WithMany(p => p.InverseParent)
+                    .HasForeignKey(d => d.ParentId);
             });
 
             modelBuilder.Entity<Quote>(entity =>
