@@ -7,6 +7,6 @@ Console.WriteLine("Hello, World!");
 
 // Examples.RunSingleEntityExample();
 
-// Examples.RunParentDependentExample();
+Examples.RunParentDependentExample();
 
-Examples.RunFromSqlRawExample();
+// Examples.RunFromSqlRawExample();
