@@ -13,14 +13,14 @@ namespace SamuraiApp.WebApi.Controllers
           "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
+        private readonly SamuraiContext _context; //  = new SamuraiContext();
         private readonly ILogger<WeatherForecastController> _logger;
 
-        SamuraiContext _context = new SamuraiContext();
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(SamuraiContext context, ILogger<WeatherForecastController> logger)
         {
+            _context = context;
             _logger = logger;
         }
-
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()

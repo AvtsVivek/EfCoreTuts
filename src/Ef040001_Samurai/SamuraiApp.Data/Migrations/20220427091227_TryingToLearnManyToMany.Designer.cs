@@ -12,8 +12,8 @@ using SamuraiApp.Data;
 namespace SamuraiApp.Data.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
-    [Migration("20220426101301_InitialMigraton")]
-    partial class InitialMigraton
+    [Migration("20220427091227_TryingToLearnManyToMany")]
+    partial class TryingToLearnManyToMany
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

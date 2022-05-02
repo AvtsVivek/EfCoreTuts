@@ -8,19 +8,19 @@ namespace SamuraiApp.WebApi.Controllers
     [Route("[controller]")]
     public class SamuraiController : ControllerBase
     {
+        private readonly SamuraiContext _context; //  = new SamuraiContext();
+
         private static readonly string[] Summaries = new[]
         {
           "Freezing", "Bracing", "Chilly", "Cool", "Mild",
             "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        SamuraiContext _context = new SamuraiContext();
-        public SamuraiController(ILogger<WeatherForecastController> logger)
+        public SamuraiController(SamuraiContext context)
         {
-            _logger = logger;
+            _context = context;
         }
+
 
         [HttpGet(Name = "GetSamurai")]
         //[HttpGet("[action]")]
@@ -81,6 +81,5 @@ namespace SamuraiApp.WebApi.Controllers
 
             return Ok();
         }
-
     }
 }

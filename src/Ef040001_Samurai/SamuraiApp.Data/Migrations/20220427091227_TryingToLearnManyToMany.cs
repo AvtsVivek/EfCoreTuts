@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SamuraiApp.Data.Migrations
 {
-    public partial class InitialMigraton : Migration
+    public partial class TryingToLearnManyToMany : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
